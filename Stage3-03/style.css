@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --bg-primary:#065E7C;
+    --bg-main:#FFFFFF;
+    --title-color:#202024;
+    --p-color:#121214;
+
+}
+
+html, body, input {
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--bg-primary);
+}
+
+#app {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    height: 100vh;
+}
+
+.container {
+    padding: 1.6rem 3.2rem;
+    width: min(112rem, 100%);
+    margin: 0 auto;
+}
+
+main {
+    overflow-y: scroll;
+}
+
+header {
+    display: flex;
+    text-align: center;
+    padding: 1.2rem 2.8rem;
+    gap: 2.5rem;
+}
+
+header img:first-child {
+    background-color: var(--bg-main);
+    width: 4rem;
+    height: 4rem;
+    padding: .8rem;
+}
+
+header form {
+    flex: 1;
+}
+
+.input-wrapper label {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 1.2rem 1.6rem;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.20);
+    opacity: 0.8;
+}
+
+.input-wrapper input::placeholder{
+    color: var(--bg-main);
+}
+
+header img{
+    width: 4.2rem;
+    height: 4.2rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+main {
+    background-color: var(--bg-main);
+}
+
+main img {
+    width: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 2.4rem;
+    color: var(--title-color);
+    font-weight: 700;
+    line-height: 38px;
+}
+
+#info {
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    color: var(--p-color);
+    font-weight: 400;
+    line-height: 25px;
+}
+
+#info2 {
+    display: grid;
+    gap: 3.2rem;
+    margin-bottom: 3.9rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+.artig h1 {
+    margin-bottom: 3.2rem;
+}
+
+figure {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+figure img {
+    width: 100%;
+}
+
+button {
+    border: 0;
+    padding: 1.2rem;
+    border-radius: 999px;
+    background-color: var(--bg-primary);
+}
+
+footer p {
+    color: var(--bg-main);
+    text-align: center;
+}
+
+@media (min-width:1024px) {
+    main {
+        padding: 4rem 10rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: start;
+        gap: 3.4rem;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    #title {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3.2rem;
+    }
+}
